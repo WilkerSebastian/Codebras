@@ -1,4 +1,4 @@
-let __ALTURA = window.innerHeight;
+let __ALTURA = window.innerHeight * 3.5;
 let __LARGURA = window.innerWidth
 
 let imagem = document.getElementById('imagem')

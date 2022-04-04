@@ -12,30 +12,30 @@ nocom.style.display = "none"
 let noperf = document.getElementById('noperf')
 noperf.style.display = "none"
 
-!function validarCurso() {
-    
-    if(localStorage.getItem('perfil') == null){
+function validarCurso() {
+
+    if (localStorage.getItem('perfil') == null) {
 
         comprado = false;
-        localStorage.setItem('curso',String(comprado))
+        localStorage.setItem('curso', String(comprado))
 
     }
     if (localStorage.getItem('curso') == null) {
-        
-        comprado = false;
-        localStorage.setItem('curso',String(comprado))
 
-    }else{
+        comprado = false;
+        localStorage.setItem('curso', String(comprado))
+
+    } else {
 
         comprado = Boolean(localStorage.getItem('curso'));
 
     }
 
-    if(comprado){
+    if (comprado) {
 
         val.style.display = "block"
 
-    }else{
+    } else {
 
         inva.style.display = "block"
 
@@ -43,17 +43,22 @@ noperf.style.display = "none"
 
 }
 
-function qualFalta(){
+validarCurso();
+
+function qualFalta() {
 
     if (!comprado) {
 
         nocom.style.display = "block"
-        
-    }
-    if (localStorage.getItem('perfil') == null) {
+
+    } else if (localStorage.getItem('perfil') == null) {
 
         noperf.style.display = "block"
-        
+
+    } else {
+
+        val.style.display = "block"
+
     }
 
 }

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeBras</title>
+
+    <link rel="stylesheet" href="../src/css/estilo.css">
+
+    <link rel="shortcut icon" type="imagex/png" href="../src/img/code.ico">
+
+    <script src="../src/js/login.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body id="corpo">
+
+    <header>
+
+        <img src="../src/img/CodeBras.png" id="imagem">
+
+        <ul class="nav nav-tabs">
+            <li id="bloco" class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+            </li>
+            <li id="bloco" class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../cursos/cursoccp.html">C++</a>
+            </li>
+            <li id="bloco" class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">UE4</a>
+            </li>
+        </ul>
+
+    </header>
+    <main>
+
+        <div id="principal">
+
+            <div id="inva">
+
+                <div id="nocom">
+
+                    <div class="alert alert-danger" role="alert" style="width: 40%;">
+                        Esse curso não pertence a você!
+                    </div>
+                    <p class="lh-3">
+                        Você não comprou esse curso para adquirilo, para<br>
+                        adquirilo deve assinar o plano da CodeBras de R$ 2400,00<br>
+                        podendo parcelar em 12x sem juros.<br>
+                    </p>
+
+                    <form action="./cursoccp.html">
+
+                        <button class="btn btn-warning" id="comprar" type="submit">COMPRAR</button>
+
+                    </form>
+
+                </div>
+                <div id="noperf">
+
+                    <div class="alert alert-danger" role="alert">
+                        Conta não encontrada!
+                    </div>
+                    <p class="lh-sm">
+                        Você não está cadastrado na nossa plataforma.Aperte o botão e para fazer o cadastro.
+                    </p>
+
+                    <form action="../cadastro/cadastro.html">
+
+                        <button class="btn btn-warning" id="comprar" type="submit">CADASTRAR</button>
+
+                    </form>
+
+                </div>
+
+            </div>
+            <div id="val">
+
+                <h1 style="margin-left: 14%;">Curso de Professor</h1>
+                <p class="lh-sm">
+                    O Curso C++ da CodeBras parte do princípio que o aluno está iniciando na programação neste<br>
+                    momento e por isso, todos os passos iniciais são descritos detalhadamente de modo a permitir<br>
+                    que qualquer pessoa seja capaz de aprender C++.<br>
+                    Se você está chegando agora na programação, seja muito bem-vindo e saiba que o nosso curso<br>
+                    guiará você pelo caminho de como se tornar um programador C++. Este curso não há<br>
+                    pré-requisito, logo, não existe a necessidade de ter qualquer conhecimento prévio.<br>
+                </p>
+
+                <h4>Aula de início</h4>
+                <video src="../src/video/cpp.mp4" width="300" height="300" controls="controls"></video>
+
+                <h4>Repositoria das aulas</h4>
+                <a href="github.com">GIT</a>
+
+            </div>
+
+        </div>
+
+    </main>
+    <nav id="navegacao">
+
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <h2>C++</h2>
+                <a class="nav-link active" aria-current="page" href="#">introdução</a>
+                <a class="nav-link active" aria-current="page" href="#">cout</a>
+                <a class="nav-link active" aria-current="page" href="#">variáveis</a>
+                <a class="nav-link active" aria-current="page" href="#">cin</a>
+                <a class="nav-link active" aria-current="page" href="#">tipos de dados</a>
+                <a class="nav-link active" aria-current="page" href="#">operadores</a>
+                <a class="nav-link active" aria-current="page" href="#">condicionais</a>
+            </li>
+            <li class="nav-item">
+
+                <h2>Perfil</h2>
+
+                <div id="user">
+
+                    <img src="../src/img/perfil_vazio.ico" width="25" height="25" alt="">
+                    <p id="perfil"></p>
+
+                </div>
+            </li>
+        </ul>
+
+    </nav>
+
+    <script src="../src/js/main.js"></script>
+    <script src="../src/js/curso.js"></script>
+
+    <script>
+
+        validarCurso()
+        qualFalta()
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
