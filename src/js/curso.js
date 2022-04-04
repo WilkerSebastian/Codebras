@@ -46,7 +46,7 @@ function qualFalta() {
         noperf.style.display = "block"
 
     }
-    if(comprado){
+    if(comprado && localStorage.getItem('perfil') != null){
 
         val.style.display = "block"
 
