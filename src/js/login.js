@@ -2,28 +2,54 @@ function logar(id) {
 
     let form = document.getElementById(id)
 
+    console.log(form.nome.value);
     localStorage.setItem('perfil' , form.nome.value)
 
 }
 
-function validar(id) {
+function validar() {
 
     let valido = true; 
 
-    let form = document.getElementById(id)
+    const nomes = ["nome" , "email" , "senha" , "senha_confirmada"]
 
-    if (form.nome.value.trim() == ""){ 
-        
-        valido = false
-        form.nome.focus()
-        alert('erro no nome')
+    let form = document.forms["cad"]
 
-    }
-    if(form.imagem.value.trim() == "") {
+    let pass
+
+    let passc
+
+    nomes.forEach(e => {
+
+        if (e == "senha") {
+            
+            pass = form[e].value
+
+        }
+
+        if (e == "senha_confirmada") {
+
+            passc = form[e].value
+            
+        }
+
+        if (form[e].value.trim() == "") {
+            
+            form[e].focus()
+            form[e].style.backgroundColor = "red"
+            form[e].style.color = "white"
+            valido = false;
+
+        }
         
-        valido = false
-        form.imagem.focus()
-        alert('erro na imagem')
+    });
+
+    if (pass != passc) {
+        
+        valido = false;
+        form["senha_confirmada"].focus()
+        form["senha_confirmada"].style.backgroundColor = "red"
+        form["senha_confirmada"].style.color = "white"
 
     }
 

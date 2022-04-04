@@ -67,3 +67,24 @@ h2{
     color: rgb(241, 241, 241);
 
 }
+
+#principal h1{
+
+    margin-top: 3%;
+    margin-left: 30%;
+
+}
+
+#cad{
+
+    margin-top: 10%;
+    margin-left: 30%;
+    width: 400px;
+
+}
+
+#cad button{
+
+    margin-left: 40%;
+
+}

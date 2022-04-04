@@ -15,7 +15,12 @@ if (localStorage.getItem('perfil') == null) {
     perfil.innerHTML = 'usúario não definido'
     perfil.style.color = "white"
 
-} 
+}  else{
+
+    perfil.innerHTML = localStorage.getItem('perfil')
+    perfil.style.color = "white"
+
+}
 
 
 const nav = document.getElementById('navegacao')
