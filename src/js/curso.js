@@ -14,36 +14,25 @@ noperf.style.display = "none"
 
 function validarCurso() {
 
-    if (localStorage.getItem('perfil') == null) {
-
-        comprado = false;
-        localStorage.setItem('curso', String(comprado))
-
-    }
     if (localStorage.getItem('curso') == null) {
 
-        comprado = false;
-        localStorage.setItem('curso', String(comprado))
+        localStorage.setItem('curso', comprado)
 
     } else {
 
-        comprado = Boolean(localStorage.getItem('curso'));
+       if(localStorage.getItem('curso') == 'false'){
 
-    }
+        comprado = false
 
-    if (comprado) {
+       }else{
 
-        val.style.display = "block"
+        comprado = true
 
-    } else {
-
-        inva.style.display = "block"
+       }
 
     }
 
 }
-
-validarCurso();
 
 function qualFalta() {
 
@@ -51,14 +40,23 @@ function qualFalta() {
 
         nocom.style.display = "block"
 
-    } else if (localStorage.getItem('perfil') == null) {
+    }
+    if (localStorage.getItem('perfil') == null) {
 
         noperf.style.display = "block"
 
-    } else {
+    }
+    if(comprado){
 
         val.style.display = "block"
+
+    }else{
+
+        val.style.display = "none"
 
     }
 
 }
+
+validarCurso();
+qualFalta();
